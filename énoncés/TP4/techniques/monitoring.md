@@ -11,7 +11,7 @@ permettant de détecter, rapporter et notifier les erreurs en production.
 
 **Critères**
 
-1. Doit rapporter **toutes** les erreurs de votre code, sauf celles générées automatiquement par Jersey (ex: 404 pour une route inexistante, 405 pour une méthode non supportée).
+1. Doit rapporter **toutes** les erreurs **non gérées** de votre code, sauf celles générées automatiquement par Jersey (ex: 404 pour une route inexistante, 405 pour une méthode non supportée).
 L'utilisation d'un *exception mapper* pourrait grandement vous aider.
 2. Utilisez la variable d'environnement `SENTRY_DSN` pour la valeur du DSN, puisqu'il s'agit d'une **donnée sensible**.
 Si la variable n'est pas définie, l'application doit démarrer normalement sans Sentry (la correction automatique ne fournit pas cette variable).
